@@ -1,3 +1,4 @@
 #!/bin/bash
-find . -type f -name '*.js' -delete
+rm $(find $(pwd) -type f -name "*.js")
+
 
