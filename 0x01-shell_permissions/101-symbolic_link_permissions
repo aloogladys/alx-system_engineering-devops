@@ -1,0 +1,2 @@
+#!/bin/bash
+chown -h betty:0x01-shell_permissions _hello
