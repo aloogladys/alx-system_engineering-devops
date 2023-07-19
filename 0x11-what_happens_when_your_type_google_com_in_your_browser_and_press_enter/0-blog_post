@@ -1,0 +1,36 @@
+When you type "google.com" in your browser and press Enter, the following sequence of events generally occurs, involving DNS request, TCP/IP, Firewall, HTTPS/SSL, Load-balancer, Web server, Application server, and Database:
+
+    DNS Request:
+        Your browser sends a Domain Name System (DNS) request to a DNS resolver (usually provided by your ISP or a third-party DNS service) to resolve the domain name "google.com" into an IP address.
+
+    DNS Resolution:
+        The DNS resolver checks its cache to see if it has the IP address for "google.com" from previous requests. If not, it recursively resolves the domain by querying the root servers, top-level domain (TLD) servers, and authoritative name servers for "google.com" until it gets the IP address.
+
+    TCP/IP:
+        Once the DNS resolver returns the IP address of "google.com" (e.g., 172.217.168.78), your browser initiates a Transmission Control Protocol (TCP) connection to that IP address. TCP ensures reliable data transmission between your browser and the server.
+
+    Firewall:
+        The server hosting "google.com" might have a firewall in place to protect it from unauthorized access. The firewall inspects incoming traffic and allows or blocks certain requests based on predefined security rules.
+
+    HTTPS/SSL:
+        If you are accessing the secure version of Google (https://google.com), your browser initiates a Secure Sockets Layer (SSL) handshake with the server. SSL establishes a secure encrypted connection between your browser and the server, ensuring that data exchanged during the session remains private and secure.
+
+    Load-balancer:
+        Large websites like Google often use load balancers to distribute incoming requests across multiple servers. Load balancers help ensure even distribution of traffic and improve the website's reliability and performance.
+
+    Web Server:
+        After passing through the load balancer (if present), your request is forwarded to one of Google's web servers (e.g., running Apache, Nginx, or another web server software). The web server processes your request and generates an appropriate response.
+
+    Application Server:
+        In some cases, the web server might need to communicate with an application server (e.g., running Python, Java, or other server-side programming languages) to fetch dynamic content or perform specific tasks. This is common for websites with dynamic content and user interactions.
+
+    Database:
+        If the requested content is stored in a database (e.g., search results, user data), the application server will query the database to retrieve the required information. Google's search results and other personalized content may be fetched from databases.
+
+    Response:
+
+    The web server (and application server, if applicable) generate the response based on the request, which might include HTML, CSS, JavaScript, and other resources. The response is sent back through the established TCP connection, encrypted with SSL if HTTPS is used.
+
+    Rendering:
+
+    Your browser receives the response and renders the content, displaying the Google homepage or search results on your screen.
